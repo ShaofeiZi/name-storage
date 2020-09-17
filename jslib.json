@@ -1,0 +1,11 @@
+{
+    "name": "nameStorage",
+    "npmname": "@fly/name-storage",
+    "umdname": "nameStorage",
+    "username": "ShaofeiZi",
+    "type": "ts",
+    "module": "umd,esm,commonjs",
+    "test": "mocha",
+    "lang": "zh",
+    "version": "1.6.0"
+}
