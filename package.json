@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "npm run lint && nyc mocha",
-    "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
     "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
     "lint:fix": "eslint -c .eslintrc.js 'src/**/*.ts' --fix",
     "build:self": "rollup -c config/rollup.config.js",
@@ -52,7 +52,7 @@
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "8.3.0",
     "rollup-plugin-node-resolve": "3.0.3",
-    "rollup-plugin-typescript2": "^0.27.2",
+    "rollup-plugin-typescript2": "0.18.0",
     "rollup-plugin-uglify": "1.0.0",
     "source-map-support": "0.5.9",
     "ts-node": "7.0.1",
