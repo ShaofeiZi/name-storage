@@ -92,7 +92,7 @@ export default class NameStorage {
                 return NameStorage.singleton;
             }
         }
-        console.warn('未在web中')
+        console.warn('未在web中');
         return null;
 
     }
