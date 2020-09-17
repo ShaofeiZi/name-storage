@@ -1,5 +1,5 @@
-class NameStorageInstance {
-    private static singleton: NameStorageInstance;
+export default class NameStorage {
+    private static singleton: NameStorage;
     private static RE_PAIR = /^([^=]+)(?:=(.*))?$/;
     private static Q = '?';
     private static EQ = '=';
@@ -82,16 +82,17 @@ class NameStorageInstance {
     public static getInstance() {
         if (window) {
             if (window.name) {
-                if (NameStorageInstance.singleton === null) {
-                    NameStorageInstance.singleton = new NameStorageInstance();
+                if (NameStorage.singleton === null) {
+                    NameStorage.singleton = new NameStorage();
                     this.parse();
                     this.addEventListener(window, 'beforeunload', () => {
                         this.save();
                     });
                 }
-                return NameStorageInstance.singleton;
+                return NameStorage.singleton;
             }
         }
+        console.warn('未在web中')
         return null;
 
     }
@@ -150,5 +151,4 @@ class NameStorageInstance {
     }
 
 }
-export const NameStorage = NameStorageInstance.getInstance;
 
